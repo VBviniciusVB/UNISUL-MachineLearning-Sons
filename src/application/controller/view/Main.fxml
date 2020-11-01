@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="455.0" fitWidth="600.0" layoutY="45.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../images/UI/Background%20Center.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="600.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../images/UI/Background%20Menu.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" prefHeight="80.0" prefWidth="400.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="398.0" spacing="185.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#Imagem" prefHeight="30.0" prefWidth="150.0" text="Imagem" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#Audio" prefHeight="30.0" prefWidth="150.0" text="Áudio" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <BorderPane fx:id="PainelPrincipal" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

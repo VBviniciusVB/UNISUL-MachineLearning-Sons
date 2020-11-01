@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="Audio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AudioController">
+   <bottom>
+      <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator />
+            <Pane prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="600.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../images/UI/Background%20Menu.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" prefHeight="80.0" prefWidth="400.0" style="-fx-border-color: black;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="398.0" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#GerarARFF" prefHeight="30.0" prefWidth="150.0" text="Gerar ARFF" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#PegarAudio" prefHeight="30.0" prefWidth="150.0" text="Pegar Audio" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ReproduzirAudio" disable="true" mnemonicParsing="false" onMouseClicked="#ReproduzirAudio" prefHeight="35.0" prefWidth="150.0" text="Reproduzir Áudio">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" prefWidth="100.0" text="Nome:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="AudioNome" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="465.0" promptText="Nome" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" spacing="25.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="100.0" text="Tempo:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AudioTempo" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="0 - Infinite" text="200" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="100.0" text="Velocidade:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AudioVelocidade" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="0.0 - 1.0" text="0.2" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefWidth="150.0" spacing="25.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="Magnitude:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="Mel Spectrogram:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="STFT:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="250.0" spacing="25.0">
+                     <children>
+                        <TextField fx:id="CaracteristicaMagnitude" alignment="CENTER" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                        <TextField fx:id="CaracteristicaMel" alignment="CENTER" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                        <TextField fx:id="CaracteristicaSTFT" alignment="CENTER" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="50.0" spacing="25.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="100.0" text="Animal:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AudioAnimal" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="150.0" promptText="Gato ou Cachorro" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="100.0" text="Chance:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AudioChance" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="150.0" promptText="Probabilidade" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
