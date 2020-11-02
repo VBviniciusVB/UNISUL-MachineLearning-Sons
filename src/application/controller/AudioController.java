@@ -13,6 +13,7 @@ import com.jlibrosa.audio.wavFile.WavFileException;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
@@ -32,10 +33,10 @@ public class AudioController {
 	 private TextField AudioNome;
 	 
 	 @FXML
-	 private static TextField AudioTempo;
-	 
+	 private TextField AudioTempo;
+
 	 @FXML
-	 private static TextField AudioVelocidade;
+	 private TextField AudioVelocidade;
 	 
 	 @FXML
 	 private TextField AudioAnimal;
@@ -91,6 +92,8 @@ public class AudioController {
 			CaracteristicaMel.setText(""+caracteristicas[1]);
 			CaracteristicaSTFT.setText(""+caracteristicas[2]);
 			
+			
+			
 			String animal;
 			if (caracteristicas[3] == 0) {
 				animal = "Gato";
@@ -133,7 +136,7 @@ public class AudioController {
 		 return null;
 	}
 	
-	public static double[] multilayerPerceptron(double[]caracteristicas) {
+	double[] multilayerPerceptron(double[]caracteristicas) {
 		double[] retorno = {0,0};
 		try {
 		
@@ -143,13 +146,11 @@ public class AudioController {
 			instancias.setClassIndex(instancias.numAttributes()-1);
 			
 			MultilayerPerceptron arvore = new MultilayerPerceptron();
-			
-			//System.out.println(AudioTempo.getText());
-			
-			//arvore.setTrainingTime(Integer.parseInt(AudioTempo.getText()));
-			//arvore.setLearningRate(Double.parseDouble(AudioVelocidade.getText()));
-			arvore.setTrainingTime(200);
-			arvore.setLearningRate(0.2);
+			arvore.setTrainingTime(Integer.parseInt(AudioTempo.getText()));
+			arvore.setLearningRate(Double.parseDouble(AudioVelocidade.getText()));
+			arvore.setMomentum(0.25);
+			arvore.setNumDecimalPlaces(2);
+			arvore.setHiddenLayers("4");
 			arvore.buildClassifier(instancias);
 			
 			Instance novo = new DenseInstance(instancias.numAttributes());

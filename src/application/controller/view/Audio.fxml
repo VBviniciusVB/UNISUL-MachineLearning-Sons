@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="Audio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AudioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AudioController">
    <bottom>
       <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
@@ -74,7 +74,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="AudioTempo" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="0 - Infinite" text="200" />
+                        <TextField fx:id="AudioTempo" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="0 - Infinite" text="220" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
@@ -84,7 +84,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="AudioVelocidade" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="0.0 - 1.0" text="0.2" />
+                        <TextField fx:id="AudioVelocidade" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="0.0 - 1.0" text="0.25" />
                      </children>
                   </HBox>
                </children>
